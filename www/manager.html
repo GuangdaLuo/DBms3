@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hedge Fund Management System</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="./js/widgEditor.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<!-- 	<script type="text/javascript" src="js/login.js"></script>
+	<script src="js/check_login.js"></script>
+	<script src="js/list_activities.js"></script>
+	<script src="js/log_out.js"></script>
+	<script src="js/search.js"></script> -->
+
+	<style type="text/css" media="all">
+		@import "css/main.css";
+		@import "css/widgEditor.css";
+		table {
+		    font-family: arial, sans-serif;
+		    width: 100%; /*most left to right*/
+		}
+
+		td, th {
+		    border: 1px solid #dddddd;
+		    text-align: left;
+		    padding: 6px;
+		}
+
+		tr:nth-child(even) {
+		    background-color: #dddddd;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/slide.css">
+	
+</head>
+
+<body>
+	<div id="header">
+		<div id="top_area">
+			<div id="logo_bar">Hedge Fund Management System</div>
+<!-- 			<div id="login_bar">
+				<div class="login">
+					<table>
+						<tr>
+							<td>username:</td>
+							<td><input type="text" id="username"></td>
+							<td><a href="./register.html">Sign up</a></td>
+						</tr>
+						<tr>
+							<td>password:</td>
+							<td><input type="password" id="password"></td>
+							<td><a href="./forget.html">forget?</a></td>
+
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="2" id="login_td"><button type="button" id="login">login</button><span id="login_td_span"></span>	</td>
+						</tr>
+					</table>
+				</div>
+			</div> -->
+		</div>
+	</div>
+	<div id="caption">
+		<caption>Hedge Fund Investment Management System for Manager</caption>
+	</div>
+	<div id="body_main">
+		<br>
+		<br>
+		<table>
+			<caption>Hedge Fund System for Manager Accounts UI</caption>
+			<tr>
+				<th>Client ID</th>
+				<th>Client Name</th>
+				<th>Account Value</th>
+			</tr>
+			<tr>
+				<td>00001</td>
+				<td>Guangda</td>
+				<td>$100,000</td>
+			</tr>
+			<tr>
+				<td>00002</td>
+				<td>Lisi</td>
+				<td>$200,000</td>
+			</tr>
+			<tr>
+				<td>00003</td>
+				<td>Moaz</td>
+				<td>$300,000</td>
+			</tr>
+			<tr>
+				<td>00004</td>
+				<td>Sean</td>
+				<td>$400,000</td>
+			</tr>
+		</table>
+
+		<table>
+			<br>
+			<br>
+			<caption>Hedge Fund System for Manager Transactions UI</caption>
+			<tr>
+				<th>Transaction ID</th>
+				<th>Type</th>
+				<th>Amount</th>
+				<th>Date</th>
+				<th>Client ID</th>
+			</tr>
+			<tr>
+				<td>12345678</td>
+				<td>Stock</td>
+				<td>$10</td>
+				<td>01/18/16</td>
+				<td>00001</td>
+			</tr>
+			<tr>
+				<td>87654321</td>
+				<td>Bond</td>
+				<td>$20</td>
+				<td>01/19/16</td>
+				<td>00002</td>
+			</tr>
+			<tr>
+				<td>17236282</td>
+				<td>Stock</td>
+				<td>$50</td>
+				<td>01/20/16</td>
+				<td>00003</td>
+			</tr>
+			<tr>
+				<td>92836741</td>
+				<td>Bond</td>
+				<td>$1000</td>
+				<td>02/18/16</td>
+				<td>00004</td>
+			</tr>
+		</table>
+
+		<table>
+			<br>
+			<br>
+			<caption>Hedge Fund System for Manager Market UI</caption>
+			<tr>
+				<th>SEC Type</th>
+				<th>Entity</th>
+				<th>Value</th>
+				<th>Date/Time</th>
+<!-- 				<th>BUY</th>
+				<th>BUY Amount</th>
+				<th>SELL</th>
+				<th>SELL Amount</th> -->
+			</tr>
+			<tr>
+				<td>Stock</td>
+				<td>Hermes</td>
+				<td>$10</td>
+				<td>01/18/16 18:00</td>
+<!-- 				<td><button type="button">BUY</button></td>
+				<th><input type="text" name="buy_amount"></th>
+				<td><button type="button">Sell</button></td>
+				<th><input type="text" name="sell_amount"></th> -->
+			</tr>
+			<tr>
+				<td>Bond</td>
+				<td>Memphis</td>
+				<td>$20</td>
+				<td>01/19/16 19:00</td>
+<!-- 				<td><button type="button">BUY</button></td>
+				<th><input type="text" name="buy_amount"></th>
+				<td><button type="button">Sell</button></td>
+				<th><input type="text" name="sell_amount"></th> -->
+			</tr>
+			<tr>
+				<td>Stock</td>
+				<td>BOA</td>
+				<td>$110</td>
+				<td>01/30/16 18:00</td>
+<!-- 				<td><button type="button">BUY</button></td>
+				<th><input type="text" name="buy_amount"></th>
+				<td><button type="button">Sell</button></td>
+				<th><input type="text" name="sell_amount"></th> -->
+			</tr>
+			<tr>
+				<td>Bond</td>
+				<td>Chase</td>
+				<td>$660</td>
+				<td>02/18/16 18:00</td>
+<!-- 				<td><button type="button">BUY</button></td>
+				<th><input type="text" name="buy_amount"></th>
+				<td><button type="button">Sell</button></td>
+				<th><input type="text" name="sell_amount"></th> -->
+			</tr>
+		</table>
+
+		<table>
+			<br>
+			<br>
+			<caption>Hedge Fund System for Manager Make Transaction UI</caption>
+			<tr> Transaction ID 02938123 </tr>
+			<tr>
+				<th>Portfolio ID</th>
+				<th>Asset ID</th>
+				<th>Sec Type</th>
+				<th>Units</th>
+			</tr>
+			<tr>
+				<th><input type="text" name="Portfolio ID"></th>
+				<th><input type="text" name="Asset ID"></th>
+				<th><input type="text" name="Sec Type"></th>
+				<th><input type="text" name="Units"></th>
+			</tr>
+			<td><button type="button">BUY</button> <button type="button">SELL</button></td>
+		</table>
+	</div>
+	
+	
+</body>
+</html>
